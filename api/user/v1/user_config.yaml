@@ -1,0 +1,21 @@
+type: google.api.Service
+config_version: 3
+
+name: users
+
+title: Users gRPC API
+apis:
+  - name: users
+
+http:
+  rules:
+    - selector: user_v1.UserV1.Get
+      get: /api/v1/user/{id}
+    - selector: user_v1.UserV1.Create
+      post: /api/v1/user
+      body: "*"
+    - selector: user_v1.UserV1.Delete
+      delete: /api/v1/user/{id}
+    - selector: user_v1.UserV1.Update
+      patch: /api/v1/user
+      body: "*"

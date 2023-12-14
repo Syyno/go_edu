@@ -1,0 +1,11 @@
+packages:
+  users/internal/service/user:
+    interfaces:
+      UserService:
+        config:
+          dir: gen/mocks/services/
+  users/internal/repository:
+    interfaces:
+      UserRepository:
+        config:
+          dir: gen/mocks/repositories/
